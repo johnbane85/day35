@@ -1,0 +1,31 @@
+<h2>Search Results</h2>
+
+<div *ngFor="let g of games">
+  <table>
+    <thead>
+      <th>gameId</th>
+      <th>name</th>
+      <th>year</th>
+      <th>ranking</th>
+      <th>usersRated</th>
+      <th>Image</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ g.gameId }}</td>
+        <td>
+          <a href="{{ g.url }}" target="_blank">{{ g.name }}</a>
+        </td>
+        <td>{{ g.year }}</td>
+        <td>{{ g.ranking }}</td>
+        <td>{{ g.usersRated }}</td>
+        <td>
+          <a href="{{ g.url }}" target="_blank"><img src="{{ g.image }}" /></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <code>Game Name: {{ g.name }}</code>
+  <img src="{{ g.image }}" /> -->
+</div>
